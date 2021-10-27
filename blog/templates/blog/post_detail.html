@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+<title>{% block title %} {{post.title}} {% endblock %}</title>
+
+<div>
+  {% block content %}
+  <a href="/blog">Voltar</a>
+  <h2>{{post.title}}</h2>
+  <p class="date">Publicado em {{ post.created }} por {{post.author}}</p>
+  {{post.body|linebreaks}} {% endblock %}
+</div>
